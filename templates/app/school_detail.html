@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        
+        <h1>School Details of {{schoolobject}}</h1>
+        <h2>School Name : {{schoolobject.sname}}</h2>
+        <h2>Principal Name : {{schoolobject.sprincipal}}</h2>
+        <h2>location : {{schoolobject.sloc}}</h2>
+
+        <h1>Student Details</h1>
+    {% for STO in schoolobject.Students.all %}
+        <h3>Student Name is : {{STO.stname}}</h3>
+        <h3>Student Age is : {{STO.stage}}</h3>
+
+    {% endfor %}
+
+       
+    </center>
+</body>
+</html>
