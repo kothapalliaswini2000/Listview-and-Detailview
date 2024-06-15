@@ -19,10 +19,17 @@ from django.urls import path,re_path
 from app.views import *
 
 urlpatterns = [
+    path('Home/',Home.as_view(),name='Home'),
     path('admin/', admin.site.urls),
 
     path('Schoollist/',Schoollist.as_view(),name='Schoollist'),
+    
     path('wish/<n>/',wish,name='wish'),
+    path('SchoolCreate/',SchoolCreate.as_view(),name='SchoolCreate'),
+    re_path('^update/(?P<pk>\d+)/',SchoolUpdate.as_view(),name='SchoolUpdate'),
+    
+
+    
 
     re_path('(?P<pk>\d+)/',SchoolDetail.as_view(),name='detail'),
 
