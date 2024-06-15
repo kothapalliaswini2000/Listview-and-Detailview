@@ -37,5 +37,9 @@ class SchoolUpdate(UpdateView):
     model=School
     fields='__all__'
 
+class SchoolDelete(DeleteView):
+    model=School
+    context_object_name='Schoolobj'
+    success_url=reverse_lazy('Schoollist')
 
 
